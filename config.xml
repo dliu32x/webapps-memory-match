@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://github.com/01org/webapps-memory-match" version="1.0" viewmodes="fullscreen">
-    <icon src="memory-match-icon.png"/>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://github.com/01org/webapps-memory-match" version="2.2.0" viewmodes="fullscreen">
+    <tizen:application id="cfKr0dUVnT.MemoryMatch" package="cfKr0dUVnT" required_version="2.2"/>
     <content src="index.html"/>
-<name>memory-match</name>
-<tizen:application id="cfKr0dUVnT" required_version="1.0"/>
-<tizen:setting screen-orientation="landscape" contextmenu="enable"/>
+    <icon src="memory-match-icon.png"/>
+    <name>memory-match</name>
+    <tizen:setting screen-orientation="landscape" context-menu="enable" background-support="disable"/>
 </widget>
