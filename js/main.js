@@ -77,23 +77,10 @@ Game = {};
     function win_dlg(lvl) {
         win_level = lvl;
 
-        if (window.chrome&&window.chrome.i18n)
-        {
-            if(lvl < 3)
-                $("#win_btn2").text(chrome.i18n.getMessage("win_nextlevel"));
-            else
-                $("#win_btn2").text(chrome.i18n.getMessage("win_backtostart"));
-            $("#win_btn1").text(chrome.i18n.getMessage("win_replay"));
-            $("#win_btn3").text(chrome.i18n.getMessage("win_quit"));
-            $("#win_dlg_text").html(chrome.i18n.getMessage("win_text"));
-        }
+        if(lvl < 3)
+            $("#win_btn2").text("NEXT LEVEL");
         else
-        {
-            if(lvl < 3)
-                $("#win_btn2").text("NEXT LEVEL");
-            else
-                $("#win_btn2").text("BACK TO START");
-        }
+            $("#win_btn2").text("BACK TO START");
 
         win_sound.play();
         $("#win_dlg_page").show();
@@ -107,16 +94,7 @@ Game = {};
         var possible_matches = (cardcount/2)|0;
 
         /* set the match text */
-        if (window.chrome&&window.chrome.i18n)
-        {
-            $("#lvl"+lvl+"_matches").text(chrome.i18n.getMessage("matches")+" "+
-             chrome.i18n.getMessage("num"+matches)+"/"+
-             chrome.i18n.getMessage("num"+possible_matches));
-        }
-        else
-        {
-            $("#lvl"+lvl+"_matches").text("Matches "+matches+"/"+possible_matches);
-        }
+        $("#lvl"+lvl+"_matches").text("Matches "+matches+"/"+possible_matches);
 
         return (flipcount >= cardcount);
     }
@@ -250,16 +228,7 @@ Game = {};
         var cardtypes = gamedata[lvl].cardcount/2;
         var i, j;
 
-        if (window.chrome&&window.chrome.i18n)
-        {
-            $("#lvl"+(lvl+1)+"_matches").text(chrome.i18n.getMessage("matches")+" "+
-                chrome.i18n.getMessage("num0")+"/"+
-                chrome.i18n.getMessage("num"+cardtypes));
-        }
-        else
-        {
-            $("#lvl"+(lvl+1)+"_matches").text("Matches 0/"+cardtypes);
-        }
+        $("#lvl"+(lvl+1)+"_matches").text("Matches 0/"+cardtypes);
 
         /* create a list of cards by index */
         for(i = 0; i < cardcount; i++)
@@ -285,19 +254,6 @@ Game = {};
         help_init("lvl1_help", "help_");
         help_init("lvl2_help", "help_");
         help_init("lvl3_help", "help_");
-        if (window.chrome&&window.chrome.i18n)
-        {
-            $("#lvl1_quit").html("&nbsp;&nbsp;&nbsp;"+chrome.i18n.getMessage("quit"));
-            $("#lvl2_quit").html("&nbsp;&nbsp;&nbsp;"+chrome.i18n.getMessage("quit"));
-            $("#lvl3_quit").html("&nbsp;&nbsp;&nbsp;"+chrome.i18n.getMessage("quit"));
-            $("#lvl1_hint").text(chrome.i18n.getMessage("hint"));
-            $("#lvl2_hint").text(chrome.i18n.getMessage("hint"));
-            $("#lvl3_hint").text(chrome.i18n.getMessage("hint"));
-            $("#main_lvl1btn").text(chrome.i18n.getMessage("level1"));
-            $("#main_lvl2btn").text(chrome.i18n.getMessage("level2"));
-            $("#main_lvl3btn").text(chrome.i18n.getMessage("level3"));
-            $("#help_contents").html(chrome.i18n.getMessage("help_text"));
-        }
 
         Game.card_flipped = card_flipped;
         Game.input_on = input_on;
