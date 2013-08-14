@@ -271,6 +271,11 @@ Game = {};
         click_sound = new gamesound("audio/NavClick.wav");
         win_sound = new gamesound("audio/WinLevel.wav");
 
+        $(window).on('tizenhwkey', function (e) {
+            if (e.originalEvent.keyName === "back") {
+                tizen.application.getCurrentApplication().exit();
+            }
+        });
 
         /* if a mouseup happens reset the buttons, this is to maintain */
         /* the original page state if a button is only half clicked */
