@@ -249,7 +249,7 @@ Game = {};
 
     $(document).ready(function()
     {
-        license_init("license", "main_page");
+        license_init("license");
         help_init();
 
         Game.card_flipped = card_flipped;
