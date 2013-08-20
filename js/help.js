@@ -7,20 +7,14 @@
  *
  */
 
-function help_init(btnid, prefix)
+function help_init()
 {
-    var btn = document.getElementById(btnid);
-    var dialog = document.getElementById(prefix+"dialog");
-    var close = document.getElementById(prefix+"close");
-    var title = document.getElementById(prefix+"title");
-    var contents = document.getElementById(prefix+"contents");
-
-    btn.addEventListener('click', function() {
-        dialog.className = "helpdialog shown";
+    $('.helplaunch').click(function() {
+        $('#help_dialog').removeClass('helpdialog').addClass('helpdialog shown');
     });
 
-    close.addEventListener('click', function() {
-        dialog.className = "helpdialog";
+    $('.close').click(function() {
+        $('#help_dialog').removeClass('helpdialog shown').addClass('helpdialog');
     });
 }
 

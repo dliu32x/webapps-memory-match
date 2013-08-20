@@ -250,10 +250,7 @@ Game = {};
     $(document).ready(function()
     {
         license_init("license", "main_page");
-        help_init("main_help", "help_");
-        help_init("lvl1_help", "help_");
-        help_init("lvl2_help", "help_");
-        help_init("lvl3_help", "help_");
+        help_init();
 
         Game.card_flipped = card_flipped;
         Game.input_on = input_on;
