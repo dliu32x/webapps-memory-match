@@ -23,20 +23,20 @@ Game = {};
     var click_sound;
     var win_sound;
 
-    function gamesound(file) {
-        this.file = file;
-        this.soundobj = new Array();
-        this.soundobj.push(new Audio(file));
-        this.soundobj.push(new Audio(file));
-        this.idx = 0;
-        this.play = function play() {
-            if(!infocus)
-                return;
+    function gamesound(audio_id, file, loop) {
+        $('<audio>', {
+            id: audio_id,
+            src: file,
+            preload: 'auto',
+            loop: (loop == undefined)?false:loop
+        }).appendTo('body');
 
-            /* create two instances of the file to play sequentially if calls */
-            /* come too fast, otherwise the second call will be ignored */
-            this.soundobj[this.idx].play();
-            this.idx = (this.idx + 1)%2;
+        this.play = function play() {
+            $('#'+audio_id)[0].play();
+        };
+
+        this.pause = function pause() {
+            $('#'+audio_id)[0].pause();
         };
     }
 
@@ -259,14 +259,14 @@ Game = {};
         Game.start_game = start_game;
 
         lvl_bg_sound = new Array();
-        lvl_bg_sound.push(document.querySelector("audio.lvl1_bg_sound"));
-        lvl_bg_sound.push(document.querySelector("audio.lvl2_bg_sound"));
-        lvl_bg_sound.push(document.querySelector("audio.lvl3_bg_sound"));
-        flip_sound = new gamesound("audio/FlipCard.wav");
-        match_sound = new gamesound("audio/GetMatch.wav");
-        mismatch_sound = new gamesound("audio/WrongLose.wav");
-        click_sound = new gamesound("audio/NavClick.wav");
-        win_sound = new gamesound("audio/WinLevel.wav");
+        lvl_bg_sound[0] = new gamesound("nightsky_sound", "audio/Nightsky.wav", true);
+        lvl_bg_sound[1] = new gamesound("ocean_sound", "audio/Ocean.wav", true);
+        lvl_bg_sound[2] = new gamesound("kitchen_sound", "audio/Kitchen.wav", true);
+        flip_sound = new gamesound("flip_sound", "audio/FlipCard.wav");
+        match_sound = new gamesound("match_sound", "audio/GetMatch.wav");
+        mismatch_sound = new gamesound("mismatch_sound", "audio/WrongLose.wav");
+        click_sound = new gamesound("click_sound", "audio/NavClick.wav");
+        win_sound = new gamesound("win_sound", "audio/WinLevel.wav");
 
         $(window).on('tizenhwkey', function (e) {
             if (e.originalEvent.keyName === "back") {
