@@ -105,26 +105,14 @@ body {
     background-position: right bottom;
 }
 
-.main_lvl1btn_off:hover {
-    background:url(../img/opening-lvl1-rollover.png) no-repeat;
-    top: 8px;
-    left: 677px;
-}
-
 .main_lvl1btn_off {
     background:url(../img/opening-lvl1.png) no-repeat;
     top: 8px;
     left: 677px;
 }
 
-.main_lvl1btn_on:hover {
-    background:url(../img/opening-lvl1.png) no-repeat;
-    top: 12px;
-    left: 681px;
-}
-
 .main_lvl1btn_on {
-    background:url(../img/opening-lvl1.png) no-repeat;
+    background:url(../img/opening-lvl1-rollover.png) no-repeat;
     top: 12px;
     left: 681px;
 }
@@ -136,26 +124,14 @@ body {
     background-position: right bottom;
 }
 
-.main_lvl2btn_off:hover {
-    background:url(../img/opening-lvl2-rollover.png) no-repeat;
-    top: 205px;
-    left: 677px;
-}
-
 .main_lvl2btn_off {
     background:url(../img/opening-lvl2.png) no-repeat;
     top: 205px;
     left: 677px;
 }
 
-.main_lvl2btn_on:hover {
-    background:url(../img/opening-lvl2.png) no-repeat;
-    top: 209px;
-    left: 681px;
-}
-
 .main_lvl2btn_on {
-    background:url(../img/opening-lvl2.png) no-repeat;
+    background:url(../img/opening-lvl2-rollover.png) no-repeat;
     top: 209px;
     left: 681px;
 }
@@ -167,26 +143,14 @@ body {
     background-position: right bottom;
 }
 
-.main_lvl3btn_off:hover {
-    background:url(../img/opening-lvl3-rollover.png) no-repeat;
-    top: 402px;
-    left: 677px;
-}
-
 .main_lvl3btn_off {
     background:url(../img/opening-lvl3.png) no-repeat;
     top: 402px;
     left: 677px;
 }
 
-.main_lvl3btn_on:hover {
-    background:url(../img/opening-lvl3.png) no-repeat;
-    top: 406px;
-    left: 681px;
-}
-
 .main_lvl3btn_on {
-    background:url(../img/opening-lvl3.png) no-repeat;
+    background:url(../img/opening-lvl3-rollover.png) no-repeat;
     top: 406px;
     left: 681px;
 }
@@ -297,26 +261,14 @@ body {
     line-height: 50px;
 }
 
-.win_btn1_off:hover {
-    background:url(../img/btn-purple-rollover.png) no-repeat;
-    top: 120px;
-    left: 70px;
-}
-
 .win_btn1_off {
     background:url(../img/btn-purple.png) no-repeat;
     top: 120px;
     left: 70px;
 }
 
-.win_btn1_on:hover {
-    background:url(../img/btn-purple.png) no-repeat;
-    top: 122px;
-    left: 72px;
-}
-
 .win_btn1_on {
-    background:url(../img/btn-purple.png) no-repeat;
+    background:url(../img/btn-purple-rollover.png) no-repeat;
     top: 122px;
     left: 72px;
 }
@@ -335,26 +287,14 @@ body {
     line-height: 56px;
 }
 
-.win_btn2_off:hover {
-    background:url(../img/btn-teal-rollover.png) no-repeat;
-    top: 117px;
-    left: 210px;
-}
-
 .win_btn2_off {
     background:url(../img/btn-teal.png) no-repeat;
     top: 117px;
     left: 210px;
 }
 
-.win_btn2_on:hover {
-    background:url(../img/btn-teal.png) no-repeat;
-    top: 119px;
-    left: 212px;
-}
-
 .win_btn2_on {
-    background:url(../img/btn-teal.png) no-repeat;
+    background:url(../img/btn-teal-rollover.png) no-repeat;
     top: 119px;
     left: 212px;
 }
@@ -373,26 +313,14 @@ body {
     line-height: 50px;
 }
 
-.win_btn3_off:hover {
-    background:url(../img/btn-purple-rollover.png) no-repeat;
-    top: 120px;
-    left: 370px;
-}
-
 .win_btn3_off {
     background:url(../img/btn-purple.png) no-repeat;
     top: 120px;
     left: 370px;
 }
 
-.win_btn3_on:hover {
-    background:url(../img/btn-purple.png) no-repeat;
-    top: 122px;
-    left: 372px;
-}
-
 .win_btn3_on {
-    background:url(../img/btn-purple.png) no-repeat;
+    background:url(../img/btn-purple-rollover.png) no-repeat;
     top: 122px;
     left: 372px;
 }

@@ -274,9 +274,24 @@ Game = {};
             }
         });
 
+        $('#main_lvl1btn').bind('touchstart mousedown', function () {
+            $('#main_lvl1btn').removeClass("main_lvl1btn_off");
+            $('#main_lvl1btn').addClass("main_lvl1btn_on");
+        })
+
+        $('#main_lvl2btn').bind('touchstart mousedown', function () {
+            $('#main_lvl2btn').removeClass("main_lvl2btn_off");
+            $('#main_lvl2btn').addClass("main_lvl2btn_on");
+        })
+
+        $('#main_lvl3btn').bind('touchstart mousedown', function () {
+            $('#main_lvl3btn').removeClass("main_lvl3btn_off");
+            $('#main_lvl3btn').addClass("main_lvl3btn_on");
+        })
+
         /* if a mouseup happens reset the buttons, this is to maintain */
         /* the original page state if a button is only half clicked */
-        $("body").mouseup(function() { 
+        $("body").bind('touchend mouseup', function() {
             $('#main_lvl1btn').removeClass("main_lvl1btn_on");
             $('#main_lvl1btn').addClass("main_lvl1btn_off");
             $('#main_lvl2btn').removeClass("main_lvl2btn_on");
@@ -285,7 +300,22 @@ Game = {};
             $('#main_lvl3btn').addClass("main_lvl3btn_off");
         });
 
-        $('#win_dlg_page').mouseup(function() { 
+        $('#win_btn1').bind('touchstart mousedown', function () {
+            $('#win_btn1').removeClass("win_btn1_off");
+            $('#win_btn1').addClass("win_btn1_on");
+        })
+
+        $('#win_btn2').bind('touchstart mousedown', function () {
+            $('#win_btn2').removeClass("win_btn2_off");
+            $('#win_btn2').addClass("win_btn2_on");
+        })
+
+        $('#win_btn3').bind('touchstart mousedown', function () {
+            $('#win_btn3').removeClass("win_btn3_off");
+            $('#win_btn3').addClass("win_btn3_on");
+        })
+
+        $('#win_dlg_page').bind('touchend mouseup', function() {
             $('#win_btn1').removeClass("win_btn1_on");
             $('#win_btn1').addClass("win_btn1_off");
             $('#win_btn2').removeClass("win_btn2_on");
