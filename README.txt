@@ -18,7 +18,6 @@ FONTS
 
 These files are a part of a group from the same source
 AmaticSC-Bold.ttf
-AmaticSC-Regular.ttf
 Origin: http://www.google.com/webfonts
 License: fonts/OFL.txt
 
