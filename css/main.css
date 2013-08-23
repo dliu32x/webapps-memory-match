@@ -885,7 +885,7 @@ body {
 #lvl3_quit { color: #e0371b; background:url(../img/lvl3-quit-x.png) no-repeat; }
 #lvl3_matches { color: #1b97ed; }
 #lvl3_hint { color: #1b97ed; }
-#lvl3_hintrays:hover { background:url(../img/lvl3-hint-rays.png) no-repeat; }
+#lvl3_hintrays:hover { background:url(../img/lvl2-hint-rays.png) no-repeat; }
 
 .lvl3_card { width: 131px; height: 131px; }
 .lvl3_card_back { background:url(../img/lvl3-card-back.png) no-repeat; }
