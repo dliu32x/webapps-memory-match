@@ -274,58 +274,8 @@ Game = {};
             }
         });
 
-        $('#main_lvl1btn').bind('touchstart mousedown', function () {
-            $('#main_lvl1btn').removeClass("main_lvl1btn_off");
-            $('#main_lvl1btn').addClass("main_lvl1btn_on");
-        })
-
-        $('#main_lvl2btn').bind('touchstart mousedown', function () {
-            $('#main_lvl2btn').removeClass("main_lvl2btn_off");
-            $('#main_lvl2btn').addClass("main_lvl2btn_on");
-        })
-
-        $('#main_lvl3btn').bind('touchstart mousedown', function () {
-            $('#main_lvl3btn').removeClass("main_lvl3btn_off");
-            $('#main_lvl3btn').addClass("main_lvl3btn_on");
-        })
-
-        /* if a mouseup happens reset the buttons, this is to maintain */
-        /* the original page state if a button is only half clicked */
-        $("body").bind('touchend mouseup', function() {
-            $('#main_lvl1btn').removeClass("main_lvl1btn_on");
-            $('#main_lvl1btn').addClass("main_lvl1btn_off");
-            $('#main_lvl2btn').removeClass("main_lvl2btn_on");
-            $('#main_lvl2btn').addClass("main_lvl2btn_off");
-            $('#main_lvl3btn').removeClass("main_lvl3btn_on");
-            $('#main_lvl3btn').addClass("main_lvl3btn_off");
-        });
-
-        $('#win_btn1').bind('touchstart mousedown', function () {
-            $('#win_btn1').removeClass("win_btn1_off");
-            $('#win_btn1').addClass("win_btn1_on");
-        })
-
-        $('#win_btn2').bind('touchstart mousedown', function () {
-            $('#win_btn2').removeClass("win_btn2_off");
-            $('#win_btn2').addClass("win_btn2_on");
-        })
-
-        $('#win_btn3').bind('touchstart mousedown', function () {
-            $('#win_btn3').removeClass("win_btn3_off");
-            $('#win_btn3').addClass("win_btn3_on");
-        })
-
-        $('#win_dlg_page').bind('touchend mouseup', function() {
-            $('#win_btn1').removeClass("win_btn1_on");
-            $('#win_btn1').addClass("win_btn1_off");
-            $('#win_btn2').removeClass("win_btn2_on");
-            $('#win_btn2').addClass("win_btn2_off");
-            $('#win_btn3').removeClass("win_btn3_on");
-            $('#win_btn3').addClass("win_btn3_off");
-        });
-
         /* game launch buttons */
-        $('#main_lvl1btn').click(function() { 
+        $('#main_lvl1btn').bind('touchstart', function() {
             click_sound.play();
             $("#main_page").hide();
             $("#lvl1_page").show();
@@ -333,7 +283,7 @@ Game = {};
             start_game(0);
         });
     
-        $('#main_lvl2btn').click(function() { 
+        $('#main_lvl2btn').bind('touchstart', function() {
             click_sound.play();
             $("#main_page").hide();
             $("#lvl2_page").show();
@@ -341,7 +291,7 @@ Game = {};
             start_game(1);
         });
 
-        $('#main_lvl3btn').click(function() { 
+        $('#main_lvl3btn').bind('touchstart', function() {
             click_sound.play();
             $("#main_page").hide();
             $("#lvl3_page").show();
@@ -350,7 +300,7 @@ Game = {};
         });
 
         /* setup for game pages */
-        $('.quit').click(function() { 
+        $('.quit').bind('touchstart', function() {
             if(!ignore)
             {
                 stop_bg_sounds();
@@ -363,7 +313,7 @@ Game = {};
             }
         });
 
-        $('.hintrays').click(function() { 
+        $('.hint').bind('touchstart', function() {
             if(!ignore)
             {
                 var id = $(this).attr("id");
@@ -371,7 +321,7 @@ Game = {};
             }
         });
 
-        $('.card').click(function(){
+        $('.card').bind('touchstart', function(){
             if(!ignore&&!($(this).hasClass('flip')))
             {
                 /* start the flip animation */
@@ -386,14 +336,14 @@ Game = {};
             }
         });
 
-        $("#win_btn1").click(function() { 
+        $("#win_btn1").bind('touchstart', function() {
             click_sound.play();
             $("#win_dlg_page").hide();
             $(".card").removeClass('flip');
             window.setTimeout("Game.start_game("+(win_level-1)+")", fliptime);
         });
 
-        $("#win_btn2").click(function() { 
+        $("#win_btn2").bind('touchstart', function() {
             click_sound.play();
             var next_level = ((win_level)%3)+1;
             $("#win_dlg_page").hide();
@@ -404,7 +354,7 @@ Game = {};
             start_game(next_level-1);
         });
 
-        $("#win_btn3").click(function() { 
+        $("#win_btn3").bind('touchstart', function() {
             stop_bg_sounds();
             click_sound.play();
             $("#win_dlg_page").hide();

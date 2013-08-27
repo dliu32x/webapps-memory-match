@@ -9,11 +9,11 @@
 
 function help_init()
 {
-    $('.helplaunch').click(function() {
+    $('.helplaunch').bind('touchstart', function() {
         $('#help_dialog').removeClass('helpdialog').addClass('helpdialog shown');
     });
 
-    $('.close').click(function() {
+    $('.close').bind('touchstart', function() {
         $('#help_dialog').removeClass('helpdialog shown').addClass('helpdialog');
     });
 }

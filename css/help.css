@@ -87,29 +87,14 @@
     color: #f3d174;
 }
 
-#lvl1_help:hover {
-    border: solid 4px #ffffff;
-    color: #ffffff;
-}
-
 #lvl2_help {
     border: solid 4px #ffffff;
     color: #ffffff;
 }
 
-#lvl2_help:hover {
-    border: solid 4px #f3d174;
-    color: #f3d174;
-}
-
 #lvl3_help {
     border: solid 4px #1b97ed;
     color: #1b97ed;
-}
-
-#lvl3_help:hover {
-    border: solid 4px #f3d174;
-    color: #f3d174;
 }
 
 #main_help {
@@ -118,9 +103,3 @@
     top: 545px;
     left: 30px;
 }
-
-#main_help:hover {
-    border: solid 4px #dddddd;
-    color: #dddddd;
-}
-

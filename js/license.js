@@ -36,7 +36,7 @@ function license_init(id)
     }
     request.send();
 
-    $('#'+id+'btnl').click(function() {
+    $('#'+id+'btnl').bind('touchstart', function() {
         /* initialize scroll rate */
         var dY = 2;
         var t0 = 0;
@@ -86,7 +86,7 @@ function license_init(id)
         }, 40);
     });
 
-    $('#'+id+'btnq').click(function() {
+    $('#'+id+'btnq').bind('touchstart', function() {
         $("#main_page").show();
         $('#'+id+'page').hide();
         clearInterval(timer);
