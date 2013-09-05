@@ -13,7 +13,7 @@ function help_init()
         $('#help_dialog').removeClass('helpdialog').addClass('helpdialog shown');
     });
 
-    $('.close').bind('touchstart', function() {
+    $('#help_close').bind('touchstart', function() {
         $('#help_dialog').removeClass('helpdialog shown').addClass('helpdialog');
     });
 }
