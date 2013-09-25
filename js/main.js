@@ -247,6 +247,17 @@ Game = {};
         input_on();
     }
 
+    function help_init()
+    {
+        $('.helplaunch').bind('touchstart', function() {
+            $('#help_dialog').removeClass('helpdialog').addClass('helpdialog shown');
+        });
+
+        $('#help_close').bind('touchstart', function() {
+            $('#help_dialog').removeClass('helpdialog shown').addClass('helpdialog');
+        });
+    }
+
     $(document).ready(function()
     {
         license_init("license");
