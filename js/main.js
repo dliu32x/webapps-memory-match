@@ -42,11 +42,10 @@ Game = {};
 
     function stop_bg_sounds() {
         for(var i = 0; i < 3; i++)
-        {
             lvl_bg_sound[i].pause();
-            if(lvl_bg_sound[i].currentTime > 0)
-                lvl_bg_sound[i].currentTime = 0;
-        }
+        $("#nightsky_sound")[0].currentTime = 0;
+        $("#ocean_sound")[0].currentTime = 0;
+        $("#kitchen_sound")[0].currentTime = 0;
     }
 
     var gamedata = [
